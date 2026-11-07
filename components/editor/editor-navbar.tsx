@@ -7,6 +7,11 @@ interface EditorNavbarProps {
   onToggleSidebar: () => void;
 }
 
+/**
+ * Fixed-height top bar of the editor with left, center and right sections.
+ * The left section holds the project sidebar toggle; its icon reflects
+ * whether the sidebar is open.
+ */
 export function EditorNavbar({
   isSidebarOpen,
   onToggleSidebar,

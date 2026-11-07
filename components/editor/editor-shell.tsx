@@ -9,6 +9,10 @@ interface EditorShellProps {
   children?: ReactNode;
 }
 
+/**
+ * Client-side frame for editor pages: owns the sidebar open state and
+ * renders the navbar, the floating project sidebar and the page content.
+ */
 export function EditorShell({ children }: EditorShellProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 

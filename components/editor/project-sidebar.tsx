@@ -13,6 +13,7 @@ interface EmptyProjectsProps {
   message: string;
 }
 
+/** Placeholder shown in a projects tab when it has no projects to list. */
 function EmptyProjects({ message }: EmptyProjectsProps) {
   return (
     <div className="flex h-full flex-col items-center justify-center gap-2 rounded-2xl border border-dashed border-surface-border px-4 py-10 text-center">
@@ -22,6 +23,11 @@ function EmptyProjects({ message }: EmptyProjectsProps) {
   );
 }
 
+/**
+ * Floating projects panel that slides in from the left over the editor
+ * content without pushing it. Shows "My projects" and "Shared" tabs and a
+ * New Project button; it is inert while closed.
+ */
 export function ProjectSidebar({ isOpen, onClose }: ProjectSidebarProps) {
   return (
     <aside
